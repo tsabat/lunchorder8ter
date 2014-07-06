@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
 get 'welcome' => 'welcome#welcome'
-get 'welcome/stuff' => 'welcome#stuff'
-get 'welcome/:username' => 'welcome#username'
 
 get 'order' => 'order#index'
 post 'order' => 'order#order'
@@ -10,6 +8,12 @@ get 'order/confirmation' => 'order#confirmation'
 
 get 'user' => 'user#index'
 post 'user' => 'user#add_user'
+
+get 'login' => 'login#index'
+
+get 'signup' => 'signup#index'
+post 'signup' => 'signup#signup'
+
 
 
 

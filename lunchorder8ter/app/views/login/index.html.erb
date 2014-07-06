@@ -1,0 +1,8 @@
+Hi, welcome to orderator.  You can login below, or <a href="/signup">sign up</a>
+
+<form action="/login" method="post">
+  <%= token_tag form_authenticity_token %>
+  Username: <input type="text" name="username"><br>
+  Password: <input type="text" name="password"><br>
+  <br><input type="submit" value="Submit">
+</form>

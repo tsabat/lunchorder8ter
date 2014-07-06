@@ -1,0 +1,14 @@
+<p id="welcom-text">Hi! Welcome to Order8ter.  Please create an account below:</p>
+
+<% if flash[:error] %>
+  <p style="color:red">The following error has occurred: <%= flash[:error] %> Please try again.</p>
+<% end %>
+
+<form action="/signup" method="post">
+  <%= token_tag form_authenticity_token %>
+  Username: <input type="text" name="username"><br>
+  Password: <input type="text" name="password"><br>
+  Password Again: <input type="text" name="password_again"><br>
+  <br><input type="submit" value="Submit">
+</form>
+
