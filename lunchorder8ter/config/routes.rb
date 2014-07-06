@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
 
 get 'home' => 'hello#home'
+get 'home/stuff' => 'hello#stuff'
 get 'home/:username' => 'hello#username'
+
+get 'order' => 'order#index'
+post 'order' => 'order#order'
+get 'order/confirmation' => 'order#confirmation'
+
+get 'newuser' => 'newuser#index'
+post 'newuser' => 'newuser#add_user'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

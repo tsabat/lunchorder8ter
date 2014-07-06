@@ -1,0 +1,8 @@
+<form action="/newuser" method="post">
+  <%= token_tag form_authenticity_token %>
+  First name: <input type="text" name="first_name"><br>
+  Last name: <input type="text" name="last_name"><br><br>
+  User name: <input type="text" name="username"><br>
+  Email address: <input type="text" name="email"><br>
+  <input type="submit" value="Submit">
+</form>

@@ -5,6 +5,10 @@ class HelloController < ApplicationController
     render
   end
 
+  def stuff
+    render(:json => {stuff: 'timmy rules'})
+  end
+
   def username
     @user = params[:username]
     render

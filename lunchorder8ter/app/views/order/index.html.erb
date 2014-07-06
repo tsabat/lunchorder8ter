@@ -1,0 +1,7 @@
+<form action="/order" method="post">
+  <%= token_tag form_authenticity_token %>
+  Username: <input type="text" name="username"><br>
+  Order Description: <br>
+  <textarea name="description" rows="10" cols="80"></textarea>
+  <br><input type="submit" value="Submit">
+</form>
