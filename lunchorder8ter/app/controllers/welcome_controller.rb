@@ -1,8 +1,14 @@
-class HelloController < ApplicationController
+class WelcomeController < ApplicationController
   before_filter :find_model
 
-  def home
+  def welcome
     render
+    # if session[:id]
+    #   @user = User.find(session[:id])
+    #   render
+    # else
+    #   redirect_to(:login)
+    # end
   end
 
   def stuff
