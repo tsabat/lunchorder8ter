@@ -4,4 +4,8 @@ class WelcomeController < ApplicationController
     render
   end
 
+  def logout
+    session[:id] = nil
+    redirect_to(:welcome)
+  end
 end

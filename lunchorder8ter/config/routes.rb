@@ -10,6 +10,9 @@ get 'user' => 'user#index'
 post 'user' => 'user#add_user'
 
 get 'login' => 'login#index'
+post 'login' => 'login#login'
+
+get 'logout' => 'welcome#logout'
 
 get 'signup' => 'signup#index'
 post 'signup' => 'signup#signup'

@@ -1,4 +1,8 @@
-Hi, welcome to orderator.  You can login below, or <a href="/signup">sign up</a>
+<p>Welcome to the Lunchorder8ter. Please login below, or <a href="/signup">sign up</a></p>
+
+<% if flash[:error] %>
+  <p style="color:red">The following error occured: <%= flash[:error] %> Please try again.</p>
+<% end %>
 
 <form action="/login" method="post">
   <%= token_tag form_authenticity_token %>
