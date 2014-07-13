@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 get 'welcome' => 'welcome#welcome'
+get 'logout' => 'welcome#logout'
 
 get 'order' => 'order#index'
 post 'order' => 'order#order'
@@ -11,8 +12,6 @@ post 'user' => 'user#add_user'
 
 get 'login' => 'login#index'
 post 'login' => 'login#login'
-
-get 'logout' => 'welcome#logout'
 
 get 'signup' => 'signup#index'
 post 'signup' => 'signup#signup'

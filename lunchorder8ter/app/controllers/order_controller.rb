@@ -5,7 +5,7 @@ class OrderController < ApplicationController
   end
 
   def order
-    user = User.find_by_username(params[:username])
+    user = User.find(session[:id])
     order = Order.new
     order.description = params[:description]
     order.user_id = user.id
