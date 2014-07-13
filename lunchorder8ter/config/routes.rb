@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-get 'welcome' => 'welcome#welcome'
+get 'welcome' => 'welcome#index'
 get 'logout' => 'welcome#logout'
 
 get 'order' => 'order#index'
