@@ -8,7 +8,7 @@ class LoginController < ApplicationController
 
   def login
     unless User.exists?(username: params[:username])
-      # check that username exists
+      # username exists?
       flash[:error] = 'Username or password incorrect.'
       return redirect_to('/login')
     end
@@ -16,7 +16,7 @@ class LoginController < ApplicationController
     user = User.find_by(username: params[:username])
 
     unless user.password == params[:password]
-      # check that password is correct
+      # password correct?
       flash[:error] = 'Username or password** incorrect.'
       return redirect_to('/login')
     end

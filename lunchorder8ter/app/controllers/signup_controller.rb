@@ -7,16 +7,22 @@ class SignupController < ApplicationController
   end
 
   def signup
+    # user unique
+    if User.exists?(username: params[:username])
+      flash[:error] = 'Username already exists.'
+      return redirect_to('/signup') 
+    end
+
+    # email unique
+    if User.exists?(email: params[:email])
+      flash[:error] = 'Email used for existing account.'
+      return redirect_to('/signup') 
+    end
+
     # passwords match
     unless params[:password] == params[:password_again] 
       flash[:error] = 'Password do not match.'
       return redirect_to('/signup')
-    end
-
-    # user unique
-    if User.where(username: params[:username]).last
-      flash[:error] = 'Username already exists.'
-      return redirect_to('/signup') 
     end
 
     # password not empty
@@ -27,6 +33,7 @@ class SignupController < ApplicationController
 
     user = User.new
     user.username = params[:username]
+    user.email = params[:email]  
     user.password = params[:password]  
     user.save!
 
