@@ -7,9 +7,6 @@ get 'order' => 'order#index'
 post 'order' => 'order#order'
 get 'order/confirmation' => 'order#confirmation'
 
-get 'user' => 'user#index'
-post 'user' => 'user#add_user'
-
 get 'login' => 'login#index'
 post 'login' => 'login#login'
 

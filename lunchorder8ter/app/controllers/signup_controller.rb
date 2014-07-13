@@ -36,7 +36,8 @@ class SignupController < ApplicationController
       u.first_name = params[:first_name]
       u.last_name = params[:last_name]
       u.email = params[:email]  
-      u.password = params[:password]  
+      u.password = params[:password]
+      u.admin = false
       u.save!
     end
 
