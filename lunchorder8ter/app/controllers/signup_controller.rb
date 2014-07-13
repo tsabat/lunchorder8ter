@@ -31,11 +31,14 @@ class SignupController < ApplicationController
       return redirect_to('/signup')
     end
 
-    user = User.new
-    user.username = params[:username]
-    user.email = params[:email]  
-    user.password = params[:password]  
-    user.save!
+    user = User.new do |u|
+      u.username = params[:username]
+      u.first_name = params[:first_name]
+      u.last_name = params[:last_name]
+      u.email = params[:email]  
+      u.password = params[:password]  
+      u.save!
+    end
 
     session[:id] = user.id
     redirect_to('/welcome')
