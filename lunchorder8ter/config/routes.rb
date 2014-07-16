@@ -3,17 +3,16 @@ Rails.application.routes.draw do
 get 'welcome' => 'welcome#index'
 get 'logout' => 'welcome#logout'
 
-get 'order' => 'order#index'
-post 'order' => 'order#order'
-get 'order/confirmation' => 'order#confirmation'
-get 'order/summary' => 'order#summary'
-
 get 'login' => 'login#index'
 post 'login' => 'login#login'
 
 get 'signup' => 'signup#index'
 post 'signup' => 'signup#signup'
 
+get 'order' => 'order#index'
+post 'order' => 'order#order'
+get 'order/confirmation' => 'order#confirmation'
+get 'order/summary' => 'order#summary'
 
 
 

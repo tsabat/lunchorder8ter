@@ -20,7 +20,7 @@ class LoginController < ApplicationController
       flash[:error] = 'Username or password** incorrect.'
       return redirect_to('/login')
     end
-
+    
     session[:id] = user.id
     redirect_to('/welcome')
   end

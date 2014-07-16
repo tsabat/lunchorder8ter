@@ -1,3 +1,10 @@
 <p>Here is a list of your orders <%= @username %>:</p>
 
-
+<table>
+<% @user_orders.each do |order| %>
+  <tr>
+    <td><%= order.created_at %></td>
+    <td><%= order.description %></td>
+  </tr>
+<% end %>
+</table>
