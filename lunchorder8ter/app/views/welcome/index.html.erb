@@ -1,10 +1,19 @@
-</head>Home Page
+</head>
+  <table>
+    <tr>
+      <td><a href="/welcome">Home</a></td>
+      <td><a href="/welcome">Restaurants</a></td> <!--link to restaurants page not functional-->
+      <td><a href="/welcome">Menus</a></td> <!--link to menu page not functional-->
+      <td><a href="/logout">Logout</a></td>
+    </tr>
+  </table>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
 <body>
   <h1 style="color: Green; font-family: Arial">Welcome to the LunchOrder8ter <%= @user.username %>! </h1>
 
-  <a href="/logout">Logout</a><br>
   <a href="/order">Create a new order</a><br>
+  <a href="/order/summary">View all orders</a><br> <!--not functional -->
 </body>
+ 
