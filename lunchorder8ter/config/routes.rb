@@ -14,6 +14,8 @@ post 'order' => 'order#order'
 get 'order/confirmation' => 'order#confirmation'
 get 'order/summary' => 'order#summary'
 
+get 'admin' => 'admin#index'
+get 'admin/email' => 'admin#email'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

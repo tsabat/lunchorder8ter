@@ -1,0 +1,17 @@
+</head>
+  <table>
+    <tr>
+      <td><a href="/welcome">Home</a></td>
+      <td><a href="/logout">Logout</a></td>
+    </tr>
+  </table>
+</head>
+
+<body>
+  <p>Here is a list of employees to email:</p>
+  <ol>
+    <% @employees.each do |person| %>
+    <li><%= person.email %></li>
+    <% end %>
+  </ol>
+</body>
