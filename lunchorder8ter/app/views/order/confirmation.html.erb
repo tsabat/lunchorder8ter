@@ -1,5 +1,8 @@
 <p>Congrats!  Order #<%= @order.id %> was placed:</p><br>
-<p><%= @order.description %></p>
+<ul>
+  <li><%= @order.price %></li>
+  <li><%= @order.description %></li>
+</ul>
 <br><br>
 
 <a href='/welcome'>Return to home page</a>

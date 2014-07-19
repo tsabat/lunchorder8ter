@@ -8,6 +8,7 @@ class OrderController < ApplicationController
     order = Order.new do |o|
       o.user_id = @user.id
       o.description = params[:description]
+      o.price = params[:price]
       o.save
     end
     redirect_to("/order/confirmation?order_id=#{order.id}")
