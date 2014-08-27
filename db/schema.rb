@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20140719184009) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.float    "price"
+    t.float    "price",       limit: 24
   end
 
   create_table "users", force: true do |t|
