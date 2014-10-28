@@ -1,9 +1,16 @@
-Anon the intern is charged with managing lunch orders and quickly realises that their job could be done by a computer: Every day at 1000, send each employee an email with a link to a form where they can choose what they want for lunch. At 1200, gather up the replies and email the list to the catering company. At the end of every month, tally up what each person owes and send the list to accounting.
+This is a reference implementation of rails [session handling](http://guides.rubyonrails.org/security.html#sessions).
 
+To set up:
 
-###Tables
+```bash
+git clone git@github.com:tsabat/lunchorder8ter.git
+cd lunchorder8ter
+bundle install
+rake db:setup
+```
 
-* users
-* orders
-* resturants
-* menus
+To run:
+
+```bash
+bundle exec rails server
+```
