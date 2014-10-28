@@ -18,7 +18,7 @@ bundle exec rails server
 To see login happen:
 
 * start the server
-* navigate to [http://localhost:3001/signup](http://localhost:3001/signup)
+* navigate to [http://localhost:3000/signup](http://localhost:3000/signup)
 
 You'll see the session cookie created in the Resources tab of chrome:
 
